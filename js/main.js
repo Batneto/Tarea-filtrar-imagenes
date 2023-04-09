@@ -93,25 +93,29 @@ pintarBotones()
 
 
 const encontrarFotos=(clase)=>{
-    
+   
     arrayFotos.forEach(item => {
         if(clase==item.clase){
             console.log(item);
            arrayPintar.push(item)
            pintarFotos(arrayPintar)
+           
         }
+        
     });
     
 }
 
 function pintarFotos(array) {
+
+    
     divFotos.innerHTML=""
     
     console.log(array);
     
-    // arrayPintar=[]
+    //arrayPintar=[]
     array.forEach(({id,titulo,src}) => {
-
+        
         const caja=document.createElement('DIV')
         const titulofoto = document.createElement("h3");
         titulofoto.textContent = titulo;
@@ -126,8 +130,10 @@ function pintarFotos(array) {
         fragment.append(caja)
        
       });
-      divFotos.append(fragment);
+      divFotos.innerHTML=""
       
+      divFotos.append(fragment);
+      arrayPintar=[]
      
     }
 
