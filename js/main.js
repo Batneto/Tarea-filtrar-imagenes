@@ -105,7 +105,7 @@ const encontrarFotos=(clase)=>{
 }
 
 function pintarFotos(array) {
-    divFotos.innerHTML=" "
+    divFotos.innerHTML=""
     
     console.log(array);
     
